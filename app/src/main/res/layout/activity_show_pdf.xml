@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity__login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.ShowPdfActivity">
+
+    <!-- toolbar -->
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+
+
+
+    <com.joanzapata.pdfview.PDFView
+        android:layout_below="@id/app_bar"
+        android:id="@+id/pdfview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <FrameLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_showpdf_teacher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/us_teacher"
+                android:layout_margin="10dp"
+                android:layout_weight="4"/>
+
+            <Button
+                android:id="@+id/btn_showpdf_testhome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/test_home"
+                android:layout_margin="10dp"
+                android:layout_weight="4"/>
+
+            <Button
+                android:id="@+id/btn_showpdf_testSchool"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/test_school"
+                android:layout_margin="10dp"
+                android:layout_weight="4" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+</RelativeLayout>
