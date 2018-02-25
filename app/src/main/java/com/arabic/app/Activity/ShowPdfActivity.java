@@ -13,7 +13,7 @@ import static java.lang.String.format;
 
 import com.arabic.app.Network.AppController;
 import com.arabic.app.R;
-import com.arabic.app.Tamrin_Class.Hashtm.tarjome_sazi_1.Tarmrin_8_class_1;
+import com.arabic.app.Paye_Haft.Hashtom.Tamrin_Class_Hashtom.tarjome_sazi_1.Tarmrin_8_class_1;
 import com.joanzapata.pdfview.PDFView;
 import com.joanzapata.pdfview.listener.OnPageChangeListener;
 
@@ -60,14 +60,38 @@ public class ShowPdfActivity extends AppCompatActivity implements OnPageChangeLi
         Bundle ex = getIntent().getExtras();
         if (ex != null) {
             switch (ex.getString("file")) {
-                case "1":
-                    pdfName = AppController.DARS_P7_8.substring(AppController.DARS_P7_8.lastIndexOf('/') + 1, AppController.DARS_P7_8.length());
+                case "7":
+                    pdfName = AppController.DARS_P7_7.substring(AppController.DARS_P7_7.lastIndexOf('/') + 1, AppController.DARS_P7_7.length());
                     displayFromUri(new File
                             (Environment.getExternalStorageDirectory() + "/.arabi/" + pdfName));
 
                     break;
-                case "2":
+                case "8":
+                    pdfName = AppController.DARS_P7_8.substring(AppController.DARS_P7_8.lastIndexOf('/') + 1, AppController.DARS_P7_8.length());
+                    displayFromUri(new File
+                            (Environment.getExternalStorageDirectory() + "/.arabi/" + pdfName));
+                    break;
+
+                case "9":
                     pdfName = AppController.DARS_P7_9.substring(AppController.DARS_P7_9.lastIndexOf('/') + 1, AppController.DARS_P7_9.length());
+                    displayFromUri(new File
+                            (Environment.getExternalStorageDirectory() + "/.arabi/" + pdfName));
+                    break;
+
+                case "10":
+                    pdfName = AppController.DARS_P7_10.substring(AppController.DARS_P7_10.lastIndexOf('/') + 1, AppController.DARS_P7_10.length());
+                    displayFromUri(new File
+                            (Environment.getExternalStorageDirectory() + "/.arabi/" + pdfName));
+                    break;
+
+                case "11":
+                    pdfName = AppController.DARS_P7_11.substring(AppController.DARS_P7_11.lastIndexOf('/') + 1, AppController.DARS_P7_11.length());
+                    displayFromUri(new File
+                            (Environment.getExternalStorageDirectory() + "/.arabi/" + pdfName));
+                    break;
+
+                case "12":
+                    pdfName = AppController.DARS_P7_12.substring(AppController.DARS_P7_12.lastIndexOf('/') + 1, AppController.DARS_P7_12.length());
                     displayFromUri(new File
                             (Environment.getExternalStorageDirectory() + "/.arabi/" + pdfName));
                     break;

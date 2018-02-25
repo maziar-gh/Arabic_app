@@ -9,7 +9,6 @@ import android.view.WindowManager;
 import com.arabic.app.Network.AppController;
 import com.arabic.app.Network.SavePref;
 import com.arabic.app.R;
-import com.arabic.app.Tamrin_Class.Hashtm.tarjome_sazi_1.Tarmrin_8_class_1;
 
 public class SplashScreen extends AppCompatActivity {
 
@@ -30,7 +29,7 @@ public class SplashScreen extends AppCompatActivity {
             public void run() {
                 startActivity(new Intent(SplashScreen.this,DarsActivity.class));
 
-                //startActivity(new Intent(SplashScreen.this,Tarmrin_8_class_1.class));
+                //startActivity(new Intent(SplashScreen.this,Tarmrin_8_home_1.class));
                 //startActivity(new Intent(SplashScreen.this,LoginActivity.class));
                 //startActivity(new Intent(SplashScreen.this,TainSathActivity.class));
                 finish();

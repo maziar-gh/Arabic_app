@@ -159,10 +159,11 @@
                             android:layout_height="fill_parent"
                             android:layout_margin="5dp"
                             android:layout_weight="2"
-                            android:background="@drawable/buttons_bg_1"
                             android:onClick="SelectDarsOnclick"
                             android:text="@string/str_dars7"
-                            android:textColor="@drawable/btn_state"
+                            android:background="@drawable/buttons_bg_dis_1"
+                            android:textColor="@drawable/btn_state_dis"
+                            android:enabled="false"
                             android:textSize="10dp"
                             android:textStyle="bold"
                             tools:ignore="OnClick" />
@@ -175,11 +176,11 @@
                             android:layout_margin="5dp"
                             android:layout_weight="2"
                             android:background="@drawable/buttons_bg_dis_1"
+                            android:textColor="@drawable/btn_state_dis"
+                            android:enabled="false"
                             android:onClick="SelectDarsOnclick"
                             android:text="@string/str_dars6"
-                            android:textColor="@drawable/btn_state_dis"
                             android:textSize="10dp"
-                            android:enabled="false"
                             android:textStyle="bold"
                             tools:ignore="OnClick" />
 

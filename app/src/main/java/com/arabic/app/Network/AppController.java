@@ -46,6 +46,7 @@ public class AppController  extends Application {
     public final static int PAY_PRICE = 8000;
 
 
+    public final static String DARS_P7_7 = "http://iava.in/arabi/dl/7/darsname-7.pdf";
     public final static String DARS_P7_8 = "http://iava.in/arabi/dl/7/darsname-8.pdf";
     public final static String DARS_P7_9 = "http://iava.in/arabi/dl/7/darsname-9.pdf";
     public final static String DARS_P7_10 = "http://iava.in/arabi/dl/7/darsname-10.pdf";

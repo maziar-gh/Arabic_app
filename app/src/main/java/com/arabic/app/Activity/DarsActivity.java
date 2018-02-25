@@ -223,11 +223,18 @@ public class DarsActivity extends AppCompatActivity {
     private void downloading() {
 
         hiddenFilder = new File(Environment.getExternalStorageDirectory().getPath() + "/.arabi/" +
-                AppController.DARS_P7_8.substring(AppController.DARS_P7_8.lastIndexOf('/') + 1, AppController.DARS_P7_8.length()));
+                AppController.DARS_P7_7.substring(AppController.DARS_P7_7.lastIndexOf('/') + 1, AppController.DARS_P7_7.length()));
         if (!hiddenFilder.exists()) {
 
             hiddenFilder = new File(Environment.getExternalStorageDirectory().getPath() + "/.arabi/");
             hiddenFilder.mkdirs();
+
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    fdl(AppController.DARS_P7_7, AppController.DARS_P7_7.substring(AppController.DARS_P7_7.lastIndexOf('/') + 1, AppController.DARS_P7_7.length()));
+                }
+            }).start();
 
             new Thread(new Runnable() {
                 @Override
@@ -240,6 +247,27 @@ public class DarsActivity extends AppCompatActivity {
                 @Override
                 public void run() {
                     fdl(AppController.DARS_P7_9, AppController.DARS_P7_9.substring(AppController.DARS_P7_9.lastIndexOf('/') + 1, AppController.DARS_P7_9.length()));
+                }
+            }).start();
+
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    fdl(AppController.DARS_P7_10, AppController.DARS_P7_10.substring(AppController.DARS_P7_10.lastIndexOf('/') + 1, AppController.DARS_P7_10.length()));
+                }
+            }).start();
+
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    fdl(AppController.DARS_P7_11, AppController.DARS_P7_11.substring(AppController.DARS_P7_11.lastIndexOf('/') + 1, AppController.DARS_P7_11.length()));
+                }
+            }).start();
+
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    fdl(AppController.DARS_P7_12, AppController.DARS_P7_12.substring(AppController.DARS_P7_12.lastIndexOf('/') + 1, AppController.DARS_P7_12.length()));
                 }
             }).start();
 
@@ -316,7 +344,7 @@ public class DarsActivity extends AppCompatActivity {
 
             case R.id.btn_dars7_selectdars: {
                 Intent intent = new Intent(getApplicationContext(), ShowPdfActivity.class);
-                intent.putExtra("file", "1");
+                intent.putExtra("file", "7");
                 startActivity(intent);
 
                 break;
@@ -324,19 +352,21 @@ public class DarsActivity extends AppCompatActivity {
 
             case R.id.btn_dars8_selectdars: {
                 Intent intent = new Intent(getApplicationContext(), ShowPdfActivity.class);
-                intent.putExtra("file", "2");
+                intent.putExtra("file", "8");
                 startActivity(intent);
                 break;
             }
 
             case R.id.btn_dars9_selectdars: {
-                Toast.makeText(getApplicationContext(), "soon", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(getApplicationContext(), ShowPdfActivity.class);
+                intent.putExtra("file", "9");
+                startActivity(intent);
                 break;
             }
 
             case R.id.btn_dars10_selectdars: {
                 Intent intent = new Intent(getApplicationContext(), ShowPdfActivity.class);
-                intent.putExtra("file", "1");
+                intent.putExtra("file", "10");
                 startActivity(intent);
 
                 break;
@@ -344,14 +374,15 @@ public class DarsActivity extends AppCompatActivity {
 
             case R.id.btn_dars11_selectdars: {
                 Intent intent = new Intent(getApplicationContext(), ShowPdfActivity.class);
-                intent.putExtra("file", "2");
+                intent.putExtra("file", "11");
                 startActivity(intent);
                 break;
             }
 
             case R.id.btn_dars12_selectdars: {
-                Toast.makeText(getApplicationContext(), "soon", Toast.LENGTH_LONG).show();
-                break;
+                Intent intent = new Intent(getApplicationContext(), ShowPdfActivity.class);
+                intent.putExtra("file", "12");
+                startActivity(intent);
             }
 
 

@@ -51,8 +51,8 @@
         <activity android:name=".TainSath.Dark_Matlab.Tamrin_7_Dark_Matlab" />
         <activity android:name=".Activity.EditprofileActivity" />
         <activity android:name=".Activity.ShowPdfActivity" />
-        <activity android:name=".Tamrin_Class.Hashtm.tarjome_sazi_1.Tarmrin_8_class_1"/>
-        <activity android:name=".Tamrin_Class.Hashtm.moratab_sazi_2.Tamrin_8_class_2"/>
+        <activity android:name=".Paye_Haft.Hashtom.Tamrin_Class_Hashtom.tarjome_sazi_1.Tarmrin_8_class_1"/>
+        <activity android:name=".Paye_Haft.Hashtom.Tamrin_Class_Hashtom.moratab_sazi_2.Tamrin_8_class_2"/>
 
     </application>
 
