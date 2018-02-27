@@ -25,7 +25,7 @@ public class SplashScreen extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         Fabric.with(this, new Crashlytics());
-        logUser();
+
 
         save = new SavePref(this);
         save.save(AppController.SAVE_RANK, 0);
@@ -42,16 +42,10 @@ public class SplashScreen extends AppCompatActivity {
                 startActivity(new Intent(SplashScreen.this,TainSathActivity.class));
                 finish();
             }
-        },100);
+        },2000);
     }
 
-    private void logUser() {
-        // TODO: Use the current user's information
-        // You can call any combination of these three methods
-        Crashlytics.setUserIdentifier("12345");
-        Crashlytics.setUserEmail("user@fabric.io");
-        Crashlytics.setUserName("Test User");
-    }
+
 
 
 }

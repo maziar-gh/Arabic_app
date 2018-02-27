@@ -76,6 +76,7 @@ public class DarsActivity extends AppCompatActivity {
 
         Fabric.with(this, new Crashlytics());
 
+        logUser();
 
         // TODO: Use your own attributes to track content views in your app
         Answers.getInstance().logContentView(new ContentViewEvent()
@@ -103,6 +104,15 @@ public class DarsActivity extends AppCompatActivity {
             downloading();
         }
 
+    }
+
+
+    private void logUser() {
+        // TODO: Use the current user's information
+        // You can call any combination of these three methods
+        Crashlytics.setUserIdentifier("12345");
+        Crashlytics.setUserEmail("user@fabric.io");
+        Crashlytics.setUserName("Test User");
     }
 
 

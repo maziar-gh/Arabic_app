@@ -82,8 +82,9 @@ public class Tamrin_8_class_2 extends AppCompatActivity {
 
                // Toast.makeText(Tamrin_8_class_2.this, "", Toast.LENGTH_SHORT).show();
 
-                Intent i = new Intent(Tamrin_8_class_2.this , DoneActivity.class);
-                startActivity(i);
+                //Intent i = new Intent(Tamrin_8_class_2.this , DoneActivity.class);
+                //startActivity(i);
+                //finish();
             }
         });
 
