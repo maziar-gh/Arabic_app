@@ -111,7 +111,7 @@ public class Tamrin_hamgorohi extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tainsath_hamgorohi);
 
-        Log.e("TAg--------", "Tamrin_hamgorohi");
+        Log.e("TAg--------", "Tarmrin_8_home_3");
 
         save = new SavePref(this);
 

@@ -9,8 +9,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
 
-import com.arabic.app.Paye_Haft.Hashtom.Tamrin_Class_Hashtom.moratab_sazi_2.Tamrin_8_class_2;
 import com.arabic.app.Network.SavePref;
+import com.arabic.app.Paye_Haft.Hashtom.Tamrin_Home_Hashtom.motazad_2.Tarmrin_8_home_2;
 import com.arabic.app.R;
 import com.arabic.app.model.model_8_home.Model_Tarjome_Sazi_8_home_1;
 
@@ -32,9 +32,9 @@ public class Tarmrin_8_home_1 extends Activity {
 
     private String[][] button = new String[][]{
 
-            {"را ", "معلمش   ", "نشناخت   ", "او «  دختر »  "},//1
+            {"را ", "معلمش   ", "نشناخت   ", "او «  دختر »  " ,"" , "" , "" , ""},//1
 
-            { "مهران", "رسیدیم  ", "در  مرزها  ", "به شهر   ", "ما   "}//2
+            { "مهران", "رسیدیم  ", "در  مرزها  ", "به شهر   ", "ما   ","" , "" , ""}//2
 
     };
 
@@ -69,7 +69,7 @@ public class Tarmrin_8_home_1 extends Activity {
                 //Toast.makeText(Tarmrin_8_home_1.this, "", Toast.LENGTH_SHORT).show();
 
 
-                Intent i = new Intent(Tarmrin_8_home_1.this, Tamrin_8_class_2.class);
+                Intent i = new Intent(Tarmrin_8_home_1.this, Tarmrin_8_home_2.class);
                 startActivity(i);
             }
         });

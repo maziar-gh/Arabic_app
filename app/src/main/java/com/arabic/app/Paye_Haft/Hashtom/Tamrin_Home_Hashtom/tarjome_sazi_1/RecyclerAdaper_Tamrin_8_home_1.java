@@ -35,7 +35,7 @@ public class RecyclerAdaper_Tamrin_8_home_1 extends RecyclerView.Adapter<Recycle
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
 
-        private TextView tv_quiz_row_js;
+        private TextView tv_tamrin_8_home_title;
 
         private TextView tv_1,
                 tv_2,
@@ -55,13 +55,13 @@ public class RecyclerAdaper_Tamrin_8_home_1 extends RecyclerView.Adapter<Recycle
                 btn_7,
                 btn_8;
 
-        private Button btn_option, btn_okk;
+        private Button btn_8_tamrin_8_home_option, btn_8_tamrin_8_home_ok;
         public int index = 0;
 
         public MyViewHolder(View view) {
             super(view);
 
-            tv_quiz_row_js = (TextView) itemView.findViewById(R.id.tv_quiz_row_js);
+            tv_tamrin_8_home_title = (TextView) itemView.findViewById(R.id.tv_tamrin_8_home_title);
 
             btn_1 = (Button) itemView.findViewById(R.id.btn_1_tamrin_8_home_1);
             btn_2 = (Button) itemView.findViewById(R.id.btn_2_tamrin_8_home_1);
@@ -72,8 +72,8 @@ public class RecyclerAdaper_Tamrin_8_home_1 extends RecyclerView.Adapter<Recycle
             btn_7 = (Button) itemView.findViewById(R.id.btn_7_tamrin_8_home_1);
             btn_8 = (Button) itemView.findViewById(R.id.btn_8_tamrin_8_home_1);
 
-            btn_option = (Button) itemView.findViewById(R.id.btn_option);
-            btn_okk = (Button) itemView.findViewById(R.id.btn_okk);
+            btn_8_tamrin_8_home_option = (Button) itemView.findViewById(R.id.btn_8_tamrin_8_home_option);
+            btn_8_tamrin_8_home_ok = (Button) itemView.findViewById(R.id.btn_8_tamrin_8_home_ok);
 
             tv_1 = (TextView) itemView.findViewById(R.id.tv_1_tamrin_8_home_1);
             tv_2 = (TextView) itemView.findViewById(R.id.tv_2_tamrin_8_home_1);
@@ -108,7 +108,7 @@ public class RecyclerAdaper_Tamrin_8_home_1 extends RecyclerView.Adapter<Recycle
     public void onBindViewHolder(final MyViewHolder holder, final int position) {
         final Model_Tarjome_Sazi_8_home_1 Item = itemList.get(position);
 
-        holder.tv_quiz_row_js.setText(Item.getTitle());
+        holder.tv_tamrin_8_home_title.setText(Item.getTitle());
 
 
         if (Item.getBtn_8() == "") {
@@ -482,7 +482,7 @@ public class RecyclerAdaper_Tamrin_8_home_1 extends RecyclerView.Adapter<Recycle
             }
         });
 
-        holder.btn_option.setOnClickListener(new View.OnClickListener() {
+        holder.btn_8_tamrin_8_home_option.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 data.clear();
@@ -514,11 +514,11 @@ public class RecyclerAdaper_Tamrin_8_home_1 extends RecyclerView.Adapter<Recycle
             }
         });
 
-        holder.btn_okk.setOnClickListener(new View.OnClickListener() {
+        holder.btn_8_tamrin_8_home_ok.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                holder.btn_option.setVisibility(View.GONE);
-                holder.btn_okk.setVisibility(View.GONE);
+                holder.btn_8_tamrin_8_home_option.setVisibility(View.GONE);
+                holder.btn_8_tamrin_8_home_ok.setVisibility(View.GONE);
 
                 String all, all2;
                 all = holder.tv_1.getText().toString() +

@@ -54,7 +54,7 @@ public class Tamrin_8_class_2 extends AppCompatActivity {
 
     private List<Model_Moratab_Sazi_8_class_2> itemList_moratab_sazi = new ArrayList<>();
     private RecyclerView rv__Tamrin_class_8_2;
-    private RecyclerAdaper_Tamrin_8_class_1 adapter_moratab_sazi;
+    private RecyclerAdaper_Tamrin_8_class_2 adapter_moratab_sazi;
 
 
     @Override
@@ -83,7 +83,7 @@ public class Tamrin_8_class_2 extends AppCompatActivity {
         });
 
         rv__Tamrin_class_8_2 = (RecyclerView) findViewById(R.id.rv__Tamrin_class_8_2);
-        adapter_moratab_sazi = new RecyclerAdaper_Tamrin_8_class_1(Tamrin_8_class_2.this, itemList_moratab_sazi);
+        adapter_moratab_sazi = new RecyclerAdaper_Tamrin_8_class_2(Tamrin_8_class_2.this, itemList_moratab_sazi);
         LinearLayoutManager mLayoutManager = new LinearLayoutManager(Tamrin_8_class_2.this);
         rv__Tamrin_class_8_2.setLayoutManager(mLayoutManager);
         rv__Tamrin_class_8_2.setItemAnimator(new DefaultItemAnimator());

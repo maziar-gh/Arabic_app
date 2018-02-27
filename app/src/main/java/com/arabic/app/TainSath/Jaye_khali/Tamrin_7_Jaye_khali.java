@@ -102,7 +102,7 @@ public class Tamrin_7_Jaye_khali extends AppCompatActivity {
         save=new SavePref(this);
 
 
-        Log.e("TAg--------", "Tamrin_7_Jaye_khali");
+        Log.e("TAg--------", "Tarmrin_8_home_5");
 
 
         tamrinBtn_next6 = (Button)findViewById(R.id.tamrinBtn_next6);

@@ -9,15 +9,16 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import static java.lang.String.format;
-
 import com.arabic.app.Network.AppController;
-import com.arabic.app.R;
 import com.arabic.app.Paye_Haft.Hashtom.Tamrin_Class_Hashtom.tarjome_sazi_1.Tarmrin_8_class_1;
+import com.arabic.app.Paye_Haft.Hashtom.Tamrin_Home_Hashtom.tarjome_sazi_1.Tarmrin_8_home_1;
+import com.arabic.app.R;
 import com.joanzapata.pdfview.PDFView;
 import com.joanzapata.pdfview.listener.OnPageChangeListener;
 
 import java.io.File;
+
+import static java.lang.String.format;
 
 public class ShowPdfActivity extends AppCompatActivity implements OnPageChangeListener {
 
@@ -45,7 +46,9 @@ public class ShowPdfActivity extends AppCompatActivity implements OnPageChangeLi
         btn_showpdf_testhome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(ShowPdfActivity.this, "تمرین در خانه", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(ShowPdfActivity.this, "تمرین در خانه", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext(), Tarmrin_8_home_1.class);
+                startActivity(intent);
             }
         });
 
