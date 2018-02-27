@@ -10,6 +10,9 @@ import android.widget.Toast;
 import com.arabic.app.Network.SavePref;
 import com.arabic.app.R;
 import com.arabic.app.TainSath.TrueFalse.Tamrin_7_TrueFalse;
+import com.crashlytics.android.Crashlytics;
+
+import io.fabric.sdk.android.Fabric;
 
 public class TainSathActivity extends AppCompatActivity {
 
@@ -23,6 +26,8 @@ public class TainSathActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tainsath);
+
+        Fabric.with(this, new Crashlytics());
 
         save = new SavePref(this);
 

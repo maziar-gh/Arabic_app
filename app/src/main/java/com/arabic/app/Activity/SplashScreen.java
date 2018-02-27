@@ -9,6 +9,9 @@ import android.view.WindowManager;
 import com.arabic.app.Network.AppController;
 import com.arabic.app.Network.SavePref;
 import com.arabic.app.R;
+import com.crashlytics.android.Crashlytics;
+
+import io.fabric.sdk.android.Fabric;
 
 public class SplashScreen extends AppCompatActivity {
 
@@ -21,22 +24,34 @@ public class SplashScreen extends AppCompatActivity {
         setContentView(R.layout.activity_splash_screen);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
+        Fabric.with(this, new Crashlytics());
+        logUser();
+
         save = new SavePref(this);
         save.save(AppController.SAVE_RANK, 0);
 
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(SplashScreen.this,DarsActivity.class));
+                //startActivity(new Intent(SplashScreen.this,DarsActivity.class));
 
                 //startActivity(new Intent(SplashScreen.this,LoginActivity.class));
 
                 //startActivity(new Intent(SplashScreen.this,Tarmrin_8_home_1.class));
 
-                //startActivity(new Intent(SplashScreen.this,TainSathActivity.class));
+                startActivity(new Intent(SplashScreen.this,TainSathActivity.class));
                 finish();
             }
         },100);
     }
+
+    private void logUser() {
+        // TODO: Use the current user's information
+        // You can call any combination of these three methods
+        Crashlytics.setUserIdentifier("12345");
+        Crashlytics.setUserEmail("user@fabric.io");
+        Crashlytics.setUserName("Test User");
+    }
+
 
 }

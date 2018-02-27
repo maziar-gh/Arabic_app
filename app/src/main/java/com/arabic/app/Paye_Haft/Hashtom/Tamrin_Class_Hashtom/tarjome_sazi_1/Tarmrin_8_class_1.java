@@ -8,6 +8,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.arabic.app.Network.SavePref;
 import com.arabic.app.R;
@@ -81,6 +82,8 @@ public class Tarmrin_8_class_1 extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tarmrin_8_class_1);
 
+        TextView name = (TextView) findViewById(R.id.name);
+        name.setText("تمرین در کلاس");
 
         Btn_next1_Tamrin_class_8 = (Button) findViewById(R.id.Btn_next1_Tamrin_class_8);
         Btn_next1_Tamrin_class_8.setOnClickListener(new View.OnClickListener() {

@@ -24,41 +24,38 @@
         android:layout_height="match_parent"/>
 
     <FrameLayout
-        android:layout_alignParentBottom="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:layout_margin="5dp"
+            android:gravity="center_horizontal"
             android:orientation="horizontal">
 
             <Button
                 android:id="@+id/btn_showpdf_teacher"
-                android:layout_width="wrap_content"
+                android:layout_width="60dp"
                 android:layout_height="wrap_content"
-                android:background="@drawable/us_teacher"
-                android:layout_margin="10dp"
-                android:layout_weight="4"/>
+                android:layout_margin="15dp"
+                android:background="@drawable/us_teacher" />
 
             <Button
                 android:id="@+id/btn_showpdf_testhome"
-                android:layout_width="wrap_content"
+                android:layout_width="60dp"
                 android:layout_height="wrap_content"
-                android:background="@drawable/test_home"
-                android:layout_margin="10dp"
-                android:layout_weight="4"/>
+                android:layout_margin="15dp"
+                android:background="@drawable/test_home" />
 
             <Button
                 android:id="@+id/btn_showpdf_testSchool"
-                android:layout_width="wrap_content"
+                android:layout_width="60dp"
                 android:layout_height="wrap_content"
-                android:background="@drawable/test_school"
-                android:layout_margin="10dp"
-                android:layout_weight="4" />
+                android:layout_margin="15dp"
+                android:background="@drawable/test_school" />
         </LinearLayout>
 
     </FrameLayout>

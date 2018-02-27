@@ -22,6 +22,7 @@ import com.arabic.app.Network.AppController;
 import com.arabic.app.Network.CustomRequest;
 import com.arabic.app.Network.SavePref;
 import com.arabic.app.R;
+import com.crashlytics.android.Crashlytics;
 import com.zarinpal.ewallets.purchase.OnCallbackRequestPaymentListener;
 import com.zarinpal.ewallets.purchase.OnCallbackVerificationPaymentListener;
 import com.zarinpal.ewallets.purchase.PaymentRequest;
@@ -34,6 +35,8 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+
+import io.fabric.sdk.android.Fabric;
 
 public class RegisterActivity extends AppCompatActivity {
 
@@ -51,8 +54,9 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register);
         this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
-        save = new SavePref(this);
+        Fabric.with(this, new Crashlytics());
 
+        save = new SavePref(this);
 
 
         Uri data = getIntent().getData();

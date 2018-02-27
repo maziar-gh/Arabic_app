@@ -1,6 +1,7 @@
 package com.arabic.app.Paye_Haft.Hashtom.Tamrin_Class_Hashtom.moratab_sazi_2;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
@@ -9,10 +10,13 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.arabic.app.Activity.DoneActivity;
 import com.arabic.app.Network.SavePref;
 import com.arabic.app.R;
+import com.arabic.app.TainSath.Jaye_khali.Tamrin_7_Jaye_khali;
 import com.arabic.app.model.model_8_class.Model_Moratab_Sazi_8_class_2;
 
 import java.util.ArrayList;
@@ -64,7 +68,8 @@ public class Tamrin_8_class_2 extends AppCompatActivity {
 
         save = new SavePref(this);
 
-        Log.e("TAg--------", "Tamrin_8_class_2");
+        TextView name = (TextView) findViewById(R.id.name);
+        name.setText("تمرین در خانه");
 
         // get the string array from string.xml file
        // quiz_motazad = getResources().getStringArray(R.array.quiz_motazad);
@@ -75,10 +80,10 @@ public class Tamrin_8_class_2 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Toast.makeText(Tamrin_8_class_2.this, "", Toast.LENGTH_SHORT).show();
+               // Toast.makeText(Tamrin_8_class_2.this, "", Toast.LENGTH_SHORT).show();
 
-                //Intent i = new Intent(Tamrin_8_class_2.this , Tamrin_7_Jaye_khali.class);
-                //startActivity(i);
+                Intent i = new Intent(Tamrin_8_class_2.this , DoneActivity.class);
+                startActivity(i);
             }
         });
 

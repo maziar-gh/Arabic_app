@@ -13,10 +13,13 @@ import com.arabic.app.Network.AppController;
 import com.arabic.app.Paye_Haft.Hashtom.Tamrin_Class_Hashtom.tarjome_sazi_1.Tarmrin_8_class_1;
 import com.arabic.app.Paye_Haft.Hashtom.Tamrin_Home_Hashtom.tarjome_sazi_1.Tarmrin_8_home_1;
 import com.arabic.app.R;
+import com.crashlytics.android.Crashlytics;
 import com.joanzapata.pdfview.PDFView;
 import com.joanzapata.pdfview.listener.OnPageChangeListener;
 
 import java.io.File;
+
+import io.fabric.sdk.android.Fabric;
 
 import static java.lang.String.format;
 
@@ -32,6 +35,8 @@ public class ShowPdfActivity extends AppCompatActivity implements OnPageChangeLi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_pdf);
+
+        Fabric.with(this, new Crashlytics());
 
         findView();
 

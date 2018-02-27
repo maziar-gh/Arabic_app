@@ -59,6 +59,9 @@
         <activity android:name=".Paye_Haft.Hashtom.Tamrin_Home_Hashtom.Tarjome_sahih_4.Tarmrin_8_home_4"/>
         <activity android:name=".Paye_Haft.Hashtom.Tamrin_Home_Hashtom.Jaye_khali_5.Tarmrin_8_home_5"/>
 
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="936b74d1b35aff8ce289b26d941b3ed09531a9d7" />
     </application>
 
 </manifest>

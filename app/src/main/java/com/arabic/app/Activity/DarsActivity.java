@@ -23,6 +23,9 @@ import com.afollestad.materialdialogs.MaterialDialog;
 import com.arabic.app.Network.AppController;
 import com.arabic.app.Network.SavePref;
 import com.arabic.app.R;
+import com.crashlytics.android.Crashlytics;
+import com.crashlytics.android.answers.Answers;
+import com.crashlytics.android.answers.ContentViewEvent;
 import com.mikepenz.google_material_typeface_library.GoogleMaterial;
 import com.mikepenz.materialdrawer.AccountHeader;
 import com.mikepenz.materialdrawer.AccountHeaderBuilder;
@@ -41,6 +44,8 @@ import java.io.FileWriter;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
+
+import io.fabric.sdk.android.Fabric;
 
 public class DarsActivity extends AppCompatActivity {
 
@@ -68,6 +73,18 @@ public class DarsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dars);
+
+        Fabric.with(this, new Crashlytics());
+
+
+        // TODO: Use your own attributes to track content views in your app
+        Answers.getInstance().logContentView(new ContentViewEvent()
+                .putContentName("arabi")
+                .putContentType("list_user")
+                .putContentId("1234")
+                .putCustomAttribute("Favorites Count", 20)
+                .putCustomAttribute("Screen Orientation", "Landscape"));
+
 
         save = new SavePref(this);
         mToolbar = (Toolbar) findViewById(R.id.app_bar);

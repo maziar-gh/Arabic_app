@@ -9,6 +9,9 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.arabic.app.R;
+import com.crashlytics.android.Crashlytics;
+
+import io.fabric.sdk.android.Fabric;
 
 public class DoneActivity extends AppCompatActivity {
 
@@ -20,6 +23,7 @@ public class DoneActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_done);
+        Fabric.with(this, new Crashlytics());
 
         DbHelper db = new DbHelper(this);
 
