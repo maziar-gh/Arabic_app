@@ -133,7 +133,6 @@
 
 
                     <TableRow
-                        android:id="@+id/tableRow2"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1">
@@ -205,8 +204,7 @@
 
 
                     <TableRow
-                        android:id="@+id/tableRow2"
-                        android:layout_width="match_parent"
+                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1">
 
@@ -309,7 +307,6 @@
 
 
                     <TextView
-                        android:id="@+id/btn_base8_selectbase"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
@@ -318,13 +315,11 @@
                         android:textStyle="bold" />
 
                     <TableRow
-                        android:id="@+id/tableRow2"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1">
 
                         <Button
-                            android:id="@+id/btn_base8_selectbase"
                             android:layout_width="0dip"
                             android:layout_height="fill_parent"
                             android:layout_margin="5dp"
@@ -352,8 +347,7 @@
                             tools:ignore="OnClick" />
 
                         <Button
-                            android:id="@+id/btn_base7_selectbase"
-                            android:layout_width="0dip"
+                           android:layout_width="0dip"
                             android:layout_height="fill_parent"
                             android:layout_margin="5dp"
                             android:layout_weight="2"
