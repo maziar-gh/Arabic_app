@@ -42,7 +42,7 @@ public class TainSathActivity extends AppCompatActivity {
     public void SelectBaseOnclick(View v) {
         switch (v.getId()) {
             case R.id.btn_base7_selectbase: {
-                Intent intent = new Intent(getApplicationContext(), RegisterActivity.class);
+                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
                 //intent.putExtra("MODE",getPlayMode()); // Send Mode to Playing page
                 startActivity(intent);
                 //finish();

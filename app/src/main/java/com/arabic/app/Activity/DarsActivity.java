@@ -227,6 +227,10 @@ public class DarsActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 save.save(AppController.SAVE_LOGIN, "0");
+                save.save(AppController.SAVE_CHECK_PAYMENT, "0");
+                save.save(AppController.SAVE_USER_ID, "0");
+                save.save(AppController.SAVE_USER_PAYEH, "0");
+                save.save(AppController.SAVE_USER_NAME, "");
                 startActivity(new Intent(DarsActivity.this, LoginActivity.class));
 
                 profile.dismiss();

@@ -1,7 +1,10 @@
 package com.arabic.app.Activity;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -110,11 +113,6 @@ public class RegisterActivity extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spRegisterTeacher.setAdapter(adapter);
 
-
-
-        dialog.setMessage("Loading...");
-        dialog.show();
-
         JsonArrayRequest req = new JsonArrayRequest(AppController.URL_OSTAD,
                 new Response.Listener<JSONArray>() {
                     @Override
@@ -134,17 +132,13 @@ public class RegisterActivity extends AppCompatActivity {
 
                         adapter.notifyDataSetChanged();
 
-                        if (dialog.isShowing()){
-                            dialog.dismiss();
-                        }
+
                     }
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
                 VolleyLog.d("TAG------------Error", "Error: " + error.getMessage());
-                if (dialog.isShowing()){
-                    dialog.dismiss();
-                }
+
             }
         });
         req.setShouldCache(false);
@@ -160,13 +154,31 @@ public class RegisterActivity extends AppCompatActivity {
             }
             case R.id.btn_register_main: {
 
-                dialog.setMessage("register please wait...");
-                dialog.show();
 
-                register(edt_fullname.getText().toString(),
-                        edt_email.getText().toString(),
-                        edt_pass.getText().toString(),
-                        idostad.get(spRegisterTeacher.getSelectedItemPosition()));
+                if(! isNetworkAvailable()) {
+                    Toast.makeText(RegisterActivity.this, "لطفا اتصال به اینترنت خود را برسی کنید", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+
+                if(AppController.isValidEmail(edt_email.getText().toString())){
+
+                    dialog.setMessage("register please wait...");
+                    dialog.show();
+                    register(edt_fullname.getText().toString(),
+                            edt_email.getText().toString(),
+                            edt_pass.getText().toString(),
+                            idostad.get(spRegisterTeacher.getSelectedItemPosition()));
+
+                }else if(! edt_pass.getText().toString().equals(edt_conf_pass.getText().toString())) {
+                    Toast.makeText(RegisterActivity.this, "لطفا رمز عبور را درست وارد کنید", Toast.LENGTH_SHORT).show();
+                    edt_conf_pass.requestFocus();
+                }else {
+                    Toast.makeText(RegisterActivity.this, "لطفا ایمیل را درست وارد کنید", Toast.LENGTH_SHORT).show();
+                    edt_email.requestFocus();
+                }
+
+
 
                 break;
             }
@@ -316,7 +328,12 @@ public class RegisterActivity extends AppCompatActivity {
 
 
 
-
+    private boolean isNetworkAvailable() {
+        ConnectivityManager connectivityManager
+                = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
+    }
 
 
 }

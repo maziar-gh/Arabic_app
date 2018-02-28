@@ -1,6 +1,9 @@
 package com.arabic.app.Network;
 
 import android.app.Application;
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.text.TextUtils;
 
 import com.android.volley.Request;
@@ -106,4 +109,12 @@ public class AppController  extends Application {
             mRequestQueue.cancelAll(tag);
         }
     }
+
+
+    public static boolean isValidEmail(CharSequence target) {
+        return !TextUtils.isEmpty(target) && android.util.Patterns.EMAIL_ADDRESS.matcher(target).matches();
+    }
+
+
+
 }

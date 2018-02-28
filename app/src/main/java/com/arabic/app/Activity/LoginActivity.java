@@ -1,7 +1,10 @@
 package com.arabic.app.Activity;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -70,10 +73,22 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                dialog.setMessage("login...");
-                dialog.show();
 
-                Login(edt_email.getText().toString(), edt_pass.getText().toString());
+                if(! isNetworkAvailable()) {
+                    Toast.makeText(LoginActivity.this, "لطفا اتصال به اینترنت خود را برسی کنید", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                if(AppController.isValidEmail(edt_email.getText().toString())){
+                    dialog.setMessage("login...");
+                    dialog.show();
+                    Login(edt_email.getText().toString(), edt_pass.getText().toString());
+                }else {
+                    Toast.makeText(LoginActivity.this, "لطفا ایمیل را درست وارد کنید", Toast.LENGTH_SHORT).show();
+                    edt_email.requestFocus();
+                }
+
+
 
 
 
@@ -254,4 +269,13 @@ public class LoginActivity extends AppCompatActivity {
         AppController.getInstance().addToRequestQueue(jsonObjReq, "FORGOT");
 
     }
+
+
+    private boolean isNetworkAvailable() {
+        ConnectivityManager connectivityManager
+                = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
+    }
+
 }
