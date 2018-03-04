@@ -39,7 +39,7 @@ public class Tarmrin_8_home_2 extends AppCompatActivity {
 
             };
 
-    private int[] javab = {
+    public static int[] javab = {
 
             0,
             0,
