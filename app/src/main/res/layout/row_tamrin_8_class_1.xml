@@ -4,10 +4,10 @@
     android:id="@+id/click_discount_cardview"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="12dp"
+    android:layout_marginBottom="8dp"
     android:layout_marginLeft="10dp"
     android:layout_marginRight="10dp"
-    android:layout_marginTop="12dp"
+    android:layout_marginTop="8dp"
     cardview:cardElevation="3dp">
 
 
@@ -49,7 +49,7 @@
                 android:padding="4dp"
                 android:text="معنی"
                 android:textColor="@color/black"
-                android:textSize="8dp"
+                android:textSize="12dp"
                 android:textStyle="bold" />
 
             <TextView
@@ -62,7 +62,7 @@
                 android:padding="4dp"
                 android:text="معنی"
                 android:textColor="@color/black"
-                android:textSize="8dp"
+                android:textSize="12dp"
                 android:textStyle="bold" />
 
             <TextView
@@ -75,7 +75,7 @@
                 android:padding="4dp"
                 android:text="معنی"
                 android:textColor="@color/black"
-                android:textSize="8dp"
+                android:textSize="12dp"
                 android:textStyle="bold" />
 
             <TextView
@@ -88,7 +88,7 @@
                 android:padding="4dp"
                 android:text="معنی"
                 android:textColor="@color/black"
-                android:textSize="8dp"
+                android:textSize="12dp"
                 android:textStyle="bold" />
 
             <TextView
@@ -101,7 +101,7 @@
                 android:padding="4dp"
                 android:text="معنی"
                 android:textColor="@color/black"
-                android:textSize="8dp"
+                android:textSize="12dp"
                 android:textStyle="bold" />
 
             <TextView
@@ -114,7 +114,7 @@
                 android:padding="4dp"
                 android:text="معنی"
                 android:textColor="@color/black"
-                android:textSize="8dp"
+                android:textSize="12dp"
                 android:textStyle="bold" />
 
             <TextView
@@ -127,7 +127,7 @@
                 android:padding="4dp"
                 android:text="معنی"
                 android:textColor="@color/black"
-                android:textSize="8dp"
+                android:textSize="12dp"
                 android:textStyle="bold" />
 
             <TextView
@@ -140,7 +140,7 @@
                 android:padding="4dp"
                 android:text="معنی"
                 android:textColor="@color/black"
-                android:textSize="8dp"
+                android:textSize="12dp"
                 android:textStyle="bold" />
 
 
@@ -173,7 +173,7 @@
                         android:gravity="center"
                         android:text="معنی"
                         android:textColor="@color/black"
-                        android:textSize="8dp" />
+                        android:textSize="12dp" />
 
                     <Button
                         android:id="@+id/btn_2_tamrin_8_class_1"
@@ -184,7 +184,7 @@
                         android:gravity="center"
                         android:text="معنی"
                         android:textColor="@color/black"
-                        android:textSize="8dp" />
+                        android:textSize="12dp" />
 
                     <Button
                         android:id="@+id/btn_3_tamrin_8_class_1"
@@ -195,7 +195,7 @@
                         android:gravity="center"
                         android:text="معنی"
                         android:textColor="@color/black"
-                        android:textSize="8dp" />
+                        android:textSize="12dp" />
 
                     <Button
                         android:id="@+id/btn_4_tamrin_8_class_1"
@@ -206,7 +206,7 @@
                         android:gravity="center"
                         android:text="معنی"
                         android:textColor="@color/black"
-                        android:textSize="8dp" />
+                        android:textSize="12dp" />
 
                     <Button
                         android:id="@+id/btn_5_tamrin_8_class_1"
@@ -217,7 +217,7 @@
                         android:gravity="center"
                         android:text="معنی"
                         android:textColor="@color/black"
-                        android:textSize="8dp" />
+                        android:textSize="12dp" />
 
                     <Button
                         android:id="@+id/btn_6_tamrin_8_class_1"
@@ -228,7 +228,7 @@
                         android:gravity="center"
                         android:text="معنی"
                         android:textColor="@color/black"
-                        android:textSize="8dp" />
+                        android:textSize="12dp" />
 
                     <Button
                         android:id="@+id/btn_7_tamrin_8_class_1"
@@ -239,7 +239,7 @@
                         android:gravity="center"
                         android:text="معنی"
                         android:textColor="@color/black"
-                        android:textSize="8dp" />
+                        android:textSize="12dp" />
 
                     <Button
                         android:id="@+id/btn_8_tamrin_8_class_1"
@@ -250,7 +250,7 @@
                         android:gravity="center"
                         android:text="معنی"
                         android:textColor="@color/black"
-                        android:textSize="8dp" />
+                        android:textSize="12dp" />
 
 
                 </LinearLayout>

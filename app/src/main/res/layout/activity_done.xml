@@ -31,7 +31,7 @@
             <TextView
                 android:id="@+id/txtTitleDone"
                 android:layout_gravity="center"
-                android:text=            "شما باید از درس سوم شروع کنید ، برای ادامه باید ثبت نام کنید."
+                android:text="شما باید از درس سوم شروع کنید ، برای ادامه باید ثبت نام کنید."
                 android:textSize="20sp"
                 android:textColor="@color/black"
                 android:layout_marginBottom="40dp"

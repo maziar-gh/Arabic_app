@@ -38,7 +38,7 @@ public class Tamrin_8_class_2 extends AppCompatActivity {
                     "أالْعِلْمُ",
                     "الدُّنیا",
                     "الصَّلاةُ",
-                    "أالنِّسْيانَُ",
+                    "ألنِّسْيانَُ",
                     "السُّؤالُ"
 
 

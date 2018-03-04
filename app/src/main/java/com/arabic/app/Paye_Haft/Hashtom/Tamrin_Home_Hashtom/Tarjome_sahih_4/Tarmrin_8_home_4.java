@@ -68,7 +68,7 @@ public class Tarmrin_8_home_4 extends AppCompatActivity {
 
                     "فی أمان الله",
                     "ربّنا ",//2
-                    "عَبَرات "
+                    "عِبَر "
 
 
             };
