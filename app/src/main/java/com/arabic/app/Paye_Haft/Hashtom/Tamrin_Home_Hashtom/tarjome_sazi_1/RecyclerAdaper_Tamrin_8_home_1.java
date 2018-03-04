@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.arabic.app.Network.AppController;
 import com.arabic.app.Network.SavePref;
+import com.arabic.app.Paye_Haft.Hashtom.Tamrin_Class_Hashtom.tarjome_sazi_1.Tarmrin_8_class_1;
 import com.arabic.app.R;
 import com.arabic.app.model.model_8_home.Model_Tarjome_Sazi_8_home_1;
 
@@ -58,6 +59,8 @@ public class RecyclerAdaper_Tamrin_8_home_1 extends RecyclerView.Adapter<Recycle
         private Button btn_8_tamrin_8_home_option, btn_8_tamrin_8_home_ok;
         public int index = 0;
 
+        private TextView tv_error, tv_correct;
+
         public MyViewHolder(View view) {
             super(view);
 
@@ -74,6 +77,9 @@ public class RecyclerAdaper_Tamrin_8_home_1 extends RecyclerView.Adapter<Recycle
 
             btn_8_tamrin_8_home_option = (Button) itemView.findViewById(R.id.btn_8_tamrin_8_home_option);
             btn_8_tamrin_8_home_ok = (Button) itemView.findViewById(R.id.btn_8_tamrin_8_home_ok);
+
+            tv_error = (TextView) itemView.findViewById(R.id.tv_quiz_row_error);
+            tv_correct = (TextView) itemView.findViewById(R.id.tv_quiz_row_correct);
 
             tv_1 = (TextView) itemView.findViewById(R.id.tv_1_tamrin_8_home_1);
             tv_2 = (TextView) itemView.findViewById(R.id.tv_2_tamrin_8_home_1);
@@ -529,14 +535,26 @@ public class RecyclerAdaper_Tamrin_8_home_1 extends RecyclerView.Adapter<Recycle
                         holder.tv_6.getText().toString() +
                         holder.tv_7.getText().toString() +
                         holder.tv_8.getText().toString();
-                all = all.replace(" ", "").trim();
-                all2 = Tarmrin_8_home_1.ANSEVER[position].replace(" ", "").trim();
 
+                holder.tv_error.setText(all);
+
+                all = all.replace(" ", "").trim();
+                all2 = Tarmrin_8_class_1.ANSEVER[position].replace(" ", "").trim();
+
+                holder.tv_correct.setText(Tarmrin_8_class_1.ANSEVER[position]);
 
                 if (all.equals(all2)) {
+
+                    holder.tv_correct.setVisibility(View.VISIBLE);
+
                     save.save(AppController.SAVE_RANK, (save.load(AppController.SAVE_RANK, 0)) + 1);
 
                 } else {
+
+
+                    holder.tv_correct.setVisibility(View.VISIBLE);
+                    holder.tv_error.setVisibility(View.VISIBLE);
+
                     save.save(AppController.SAVE_RANK, (save.load(AppController.SAVE_RANK, 0)) - 1);
 
                 }

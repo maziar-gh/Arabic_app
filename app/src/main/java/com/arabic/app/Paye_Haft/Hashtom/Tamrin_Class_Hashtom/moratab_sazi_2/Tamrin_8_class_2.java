@@ -31,7 +31,7 @@ public class Tamrin_8_class_2 extends AppCompatActivity {
     SavePref save;
 
 
-    private String[] quiz =
+    public static String[] quiz =
 
             {
 
@@ -45,7 +45,7 @@ public class Tamrin_8_class_2 extends AppCompatActivity {
 
             };
 
-    private int[] javab = {
+    public static int[] javab = {
 
             1,
             2,
