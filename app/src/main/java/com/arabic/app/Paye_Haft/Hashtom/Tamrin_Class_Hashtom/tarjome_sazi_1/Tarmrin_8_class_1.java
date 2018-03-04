@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.arabic.app.Network.AppController;
 import com.arabic.app.Network.SavePref;
 import com.arabic.app.R;
 import com.arabic.app.Paye_Haft.Hashtom.Tamrin_Class_Hashtom.moratab_sazi_2.Tamrin_8_class_2;
@@ -125,5 +126,15 @@ public class Tarmrin_8_class_1 extends Activity {
         adapter_user.notifyDataSetChanged();
 
 
+    }
+
+
+    @Override
+    protected void onResume() {
+        if(AppController.CLOSE_ACTIVITY){
+            AppController.CLOSE_ACTIVITY = false;
+            finish();
+        }
+        super.onResume();
     }
 }

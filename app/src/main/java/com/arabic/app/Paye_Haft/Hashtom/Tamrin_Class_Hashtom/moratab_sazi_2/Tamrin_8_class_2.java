@@ -14,6 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.arabic.app.Activity.DoneActivity;
+import com.arabic.app.Network.AppController;
 import com.arabic.app.Network.SavePref;
 import com.arabic.app.R;
 import com.arabic.app.TainSath.Jaye_khali.Tamrin_7_Jaye_khali;
@@ -69,7 +70,7 @@ public class Tamrin_8_class_2 extends AppCompatActivity {
         save = new SavePref(this);
 
         TextView name = (TextView) findViewById(R.id.name);
-        name.setText("تمرین در خانه");
+        name.setText("تمرین در کلاس");
 
         // get the string array from string.xml file
        // quiz_motazad = getResources().getStringArray(R.array.quiz_motazad);
@@ -82,9 +83,8 @@ public class Tamrin_8_class_2 extends AppCompatActivity {
 
                // Toast.makeText(Tamrin_8_class_2.this, "", Toast.LENGTH_SHORT).show();
 
-                //Intent i = new Intent(Tamrin_8_class_2.this , DoneActivity.class);
-                //startActivity(i);
-                //finish();
+                AppController.CLOSE_ACTIVITY = true;
+                finish();
             }
         });
 

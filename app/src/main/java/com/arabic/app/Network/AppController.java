@@ -48,7 +48,10 @@ public class AppController  extends Application {
 
     //public final static String PAY_MERCHENT_CODE = "97161756-7cb2-11e6-bfce-000c295eb8fc";
     public final static String PAY_MERCHENT_CODE = "41b7851c-7a70-11e7-bca1-000c295eb8fc";
-    public final static int PAY_PRICE = 8000;
+    public final static int PAY_PRICE = 10000;
+
+    public static boolean CLOSE_ACTIVITY = false;
+
 
 
     public final static String DARS_P7_7 = "http://iava.in/arabi/dl/7/darsname-7.pdf";

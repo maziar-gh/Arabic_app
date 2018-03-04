@@ -8,8 +8,10 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.arabic.app.Network.AppController;
 import com.arabic.app.Network.SavePref;
 import com.arabic.app.R;
 import com.arabic.app.model.model_8_home.Model_jayeKhali_8_home_5;
@@ -122,6 +124,8 @@ public class Tarmrin_8_home_5 extends AppCompatActivity {
 
         save=new SavePref(this);
 
+        TextView name = (TextView) findViewById(R.id.name);
+        name.setText("تمرین در خانه");
 
         Log.e("TAg--------", "Tarmrin_8_home_5");
 
@@ -131,9 +135,9 @@ public class Tarmrin_8_home_5 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Toast.makeText(Tarmrin_8_home_5.this, "پایان", Toast.LENGTH_SHORT).show();
 
-
+                AppController.CLOSE_ACTIVITY = true;
+                finish();
 
                 /*Intent i = new Intent(Tarmrin_8_home_5.this , Tamrin_7_Dark_Matlab.class);
                 startActivity(i);*/

@@ -9,7 +9,9 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
+import com.arabic.app.Network.AppController;
 import com.arabic.app.Network.SavePref;
 import com.arabic.app.Paye_Haft.Hashtom.Tamrin_Home_Hashtom.Hamgorohi_3.Tarmrin_8_home_3;
 import com.arabic.app.R;
@@ -59,6 +61,9 @@ public class Tarmrin_8_home_2 extends AppCompatActivity {
 
         save = new SavePref(this);
 
+        TextView name = (TextView) findViewById(R.id.name);
+        name.setText("تمرین در خانه");
+
         // get the string array from string.xml file
        // quiz_motazad = getResources().getStringArray(R.array.quiz_motazad);
 
@@ -94,5 +99,12 @@ public class Tarmrin_8_home_2 extends AppCompatActivity {
 
     }
 
+    @Override
+    protected void onResume() {
+        if(AppController.CLOSE_ACTIVITY){
+            finish();
+        }
+        super.onResume();
+    }
 
 }

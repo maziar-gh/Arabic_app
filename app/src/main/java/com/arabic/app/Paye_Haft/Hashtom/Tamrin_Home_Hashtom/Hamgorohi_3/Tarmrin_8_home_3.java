@@ -9,8 +9,10 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 
+import com.arabic.app.Network.AppController;
 import com.arabic.app.Network.SavePref;
 import com.arabic.app.Paye_Haft.Hashtom.Tamrin_Home_Hashtom.Tarjome_sahih_4.Tarmrin_8_home_4;
 import com.arabic.app.R;
@@ -106,6 +108,9 @@ public class Tarmrin_8_home_3 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tarmrin_8_home_3);
 
+        TextView name = (TextView) findViewById(R.id.name);
+        name.setText("تمرین در خانه");
+
         Log.e("TAg--------", "Tarmrin_8_home_3");
 
         save = new SavePref(this);
@@ -143,4 +148,14 @@ public class Tarmrin_8_home_3 extends AppCompatActivity {
 
 
     }
+
+
+    @Override
+    protected void onResume() {
+        if(AppController.CLOSE_ACTIVITY){
+            finish();
+        }
+        super.onResume();
+    }
+
 }

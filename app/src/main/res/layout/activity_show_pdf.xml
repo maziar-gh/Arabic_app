@@ -36,26 +36,72 @@
             android:gravity="center_horizontal"
             android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/btn_showpdf_teacher"
-                android:layout_width="60dp"
-                android:layout_height="wrap_content"
+            <LinearLayout
+                android:layout_width="70dp"
+                android:layout_height="70dp"
                 android:layout_margin="15dp"
-                android:background="@drawable/us_teacher" />
+                android:background="#88d6d6d6"
+                android:orientation="vertical">
 
-            <Button
-                android:id="@+id/btn_showpdf_testhome"
-                android:layout_width="60dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="15dp"
-                android:background="@drawable/test_home" />
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="ارتباط با استاد"
+                    android:textSize="12sp" />
 
-            <Button
-                android:id="@+id/btn_showpdf_testSchool"
-                android:layout_width="60dp"
-                android:layout_height="wrap_content"
+                <Button
+                    android:id="@+id/btn_showpdf_teacher"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/us_teacher" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="70dp"
+                android:layout_height="70dp"
                 android:layout_margin="15dp"
-                android:background="@drawable/test_school" />
+                android:background="#88d6d6d6"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="تمرین در خانه"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/btn_showpdf_testhome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/test_home" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="15dp"
+                android:background="#88d6d6d6"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="تمرین در کلاس"
+                    android:textSize="12sp"
+                    android:gravity="center_horizontal" />
+
+                <Button
+                    android:id="@+id/btn_showpdf_testSchool"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/test_school" />
+            </LinearLayout>
+
         </LinearLayout>
 
     </FrameLayout>

@@ -8,7 +8,9 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
+import com.arabic.app.Network.AppController;
 import com.arabic.app.Network.SavePref;
 import com.arabic.app.Paye_Haft.Hashtom.Tamrin_Home_Hashtom.motazad_2.Tarmrin_8_home_2;
 import com.arabic.app.R;
@@ -61,6 +63,9 @@ public class Tarmrin_8_home_1 extends Activity {
         setContentView(R.layout.tarmrin_8_home_1);
 
 
+        TextView name = (TextView) findViewById(R.id.name);
+        name.setText("تمرین در خانه");
+
         Btn_next1_Tamrin_home_8 = (Button) findViewById(R.id.Btn_next1_Tamrin_home_8);
         Btn_next1_Tamrin_home_8.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -101,5 +106,14 @@ public class Tarmrin_8_home_1 extends Activity {
         adapter_user.notifyDataSetChanged();
 
 
+    }
+
+    @Override
+    protected void onResume() {
+        if(AppController.CLOSE_ACTIVITY){
+            AppController.CLOSE_ACTIVITY = false;
+            finish();
+        }
+        super.onResume();
     }
 }
