@@ -58,6 +58,8 @@ public class RecyclerAdaper_Tamrin_8_class_1 extends RecyclerView.Adapter<Recycl
         private Button btn_option, btn_okk;
         public int index = 0;
 
+        private TextView tv_error, tv_correct;
+
         public MyViewHolder(View view) {
             super(view);
 
@@ -74,6 +76,9 @@ public class RecyclerAdaper_Tamrin_8_class_1 extends RecyclerView.Adapter<Recycl
 
             btn_option = (Button) itemView.findViewById(R.id.btn_option);
             btn_okk = (Button) itemView.findViewById(R.id.btn_okk);
+
+            tv_error = (TextView) itemView.findViewById(R.id.tv_quiz_row_error);
+            tv_correct = (TextView) itemView.findViewById(R.id.tv_quiz_row_correct);
 
             tv_1 = (TextView) itemView.findViewById(R.id.tv_1_tamrin_8_class_1);
             tv_2 = (TextView) itemView.findViewById(R.id.tv_2_tamrin_8_class_1);
@@ -483,6 +488,8 @@ public class RecyclerAdaper_Tamrin_8_class_1 extends RecyclerView.Adapter<Recycl
             }
         });
 
+
+
         holder.btn_option.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -530,14 +537,26 @@ public class RecyclerAdaper_Tamrin_8_class_1 extends RecyclerView.Adapter<Recycl
                         holder.tv_6.getText().toString() +
                         holder.tv_7.getText().toString() +
                         holder.tv_8.getText().toString();
+
+                holder.tv_error.setText(all);
+
                 all = all.replace(" ", "").trim();
                 all2 = Tarmrin_8_class_1.ANSEVER[position].replace(" ", "").trim();
 
+                holder.tv_correct.setText(Tarmrin_8_class_1.ANSEVER[position]);
 
                 if (all.equals(all2)) {
+
+                    holder.tv_correct.setVisibility(View.VISIBLE);
+
                     save.save(AppController.SAVE_RANK, (save.load(AppController.SAVE_RANK, 0)) + 1);
 
                 } else {
+
+
+                    holder.tv_correct.setVisibility(View.VISIBLE);
+                    holder.tv_error.setVisibility(View.VISIBLE);
+
                     save.save(AppController.SAVE_RANK, (save.load(AppController.SAVE_RANK, 0)) - 1);
 
                 }
@@ -554,6 +573,7 @@ public class RecyclerAdaper_Tamrin_8_class_1 extends RecyclerView.Adapter<Recycl
         tv.setText(btn.getText().toString());
         btn.setBackgroundColor(Color.parseColor("#D96E6E6E"));
         btn.setEnabled(false);
+
 
     }
 

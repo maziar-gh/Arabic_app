@@ -301,6 +301,32 @@
 
         </LinearLayout>
 
+        <TextView
+            android:id="@+id/tv_quiz_row_error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:text="معنی فارسی"
+            android:textColor="@color/md_red_A700"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_quiz_row_correct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:text="معنی فارسی"
+            android:textColor="@color/material_green_A700"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
 
     </LinearLayout>
 
