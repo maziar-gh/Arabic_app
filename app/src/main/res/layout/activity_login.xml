@@ -37,6 +37,7 @@
             android:textStyle="bold" />
 
         <RelativeLayout
+            android:id="@+id/rl_mlogin_main"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/login_title"
@@ -124,6 +125,23 @@
 
         </RelativeLayout>
 
+
+
+
+        <Button
+            android:layout_below="@+id/rl_mlogin_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:background="@color/white"
+            android:text="مشاهده درس هشتم(رایگان)"
+            android:textAllCaps="false"
+            android:textColor="@color/material_green_900"
+            android:textSize="18sp"
+            android:id="@+id/btn_login_free" />
 
         <!--
                 <ImageButton

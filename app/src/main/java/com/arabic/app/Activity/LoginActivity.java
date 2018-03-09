@@ -41,7 +41,7 @@ public class LoginActivity extends AppCompatActivity {
     ProgressDialog dialog;
 
     Button btn_login_main;
-    TextView edt_email, edt_pass;
+    TextView edt_email, edt_pass,btn_login_free;
 
     String active = "0";
 
@@ -66,6 +66,8 @@ public class LoginActivity extends AppCompatActivity {
         dialog = new ProgressDialog(this);
 
         btn_login_main = (Button) findViewById(R.id.btn_login_main);
+        btn_login_free = (Button) findViewById(R.id.btn_login_free);
+
         edt_email = (EditText) findViewById(R.id.edt_email);
         edt_pass = (EditText) findViewById(R.id.edt_pass);
 
@@ -92,6 +94,17 @@ public class LoginActivity extends AppCompatActivity {
 
 
 
+            }
+        });
+
+
+
+        btn_login_free.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), ShowPdfActivity.class);
+                intent.putExtra("file", "8");
+                startActivity(intent);
             }
         });
     }

@@ -26,9 +26,12 @@ public class Tarmrin_8_home_5 extends AppCompatActivity {
 
             {
 
-                    " خدا شما را حفظ کند ِ", //1
-                    "خدایان ما ", //2
-                    "عبرت ها "//3
+                    " نحنُ   ............لِأخْذِ الْجَوائِزِِ", //1
+                    "...ضَرَبْنا لکم أمثالاً متعددةً.", //2
+                    "....وَقَعَ عَلی الأرضِ ",//3
+                    "أنا.... ملابسکِ ",
+                    "عبرنا من الحدود ثمّ.... إلی خارج البلاد  "
+
 
 
 
@@ -94,7 +97,7 @@ public class Tarmrin_8_home_5 extends AppCompatActivity {
 
 
 
-    private int[] ansever =
+    public static int[] ansever =
 
             {
 

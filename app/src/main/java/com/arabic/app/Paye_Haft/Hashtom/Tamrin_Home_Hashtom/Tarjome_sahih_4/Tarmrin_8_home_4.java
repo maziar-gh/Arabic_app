@@ -77,7 +77,7 @@ public class Tarmrin_8_home_4 extends AppCompatActivity {
 
 
 
-    private int[] ansever =
+    public static int[] ansever =
 
             {
 

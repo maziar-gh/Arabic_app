@@ -1,4 +1,4 @@
-package com.arabic.app.Paye_Haft.Hashtom.Tamrin_Home_Hashtom.Tarjome_sahih_4;
+package com.arabic.app.Paye_Haft.Nohom.Tamrin_Class_Nohom.TrueFalse2_3;
 
 import android.content.Context;
 import android.graphics.Typeface;
@@ -13,10 +13,10 @@ import android.widget.TextView;
 
 import com.arabic.app.Network.AppController;
 import com.arabic.app.Network.SavePref;
-import com.arabic.app.Paye_Haft.Hashtom.Tamrin_Home_Hashtom.Hamgorohi_3.Tarmrin_8_home_3;
+import com.arabic.app.Paye_Haft.Hashtom.Tamrin_Home_Hashtom.Jaye_khali_5.Tarmrin_8_home_5;
 import com.arabic.app.R;
-import com.arabic.app.model.Tain_Sath.Jaye_khali;
-import com.arabic.app.model.model_8_home.Model_jomleSahih_8_home_4;
+import com.arabic.app.model.model_9_class.Model_TrueFalse2_9_class_3;
+import com.arabic.app.model.model_9_class.Model_TrueFalse_9_class_1;
 
 import java.util.List;
 
@@ -24,46 +24,43 @@ import java.util.List;
  * Created by Maziar on 12/15/2017.
  */
 
-public class RecyclerAdaper_Tamrin_8_home_4 extends RecyclerView.Adapter<RecyclerAdaper_Tamrin_8_home_4.MyViewHolder> {
+public class RecyclerAdaper_Tamrin_9_class_3 extends RecyclerView.Adapter<RecyclerAdaper_Tamrin_9_class_3.MyViewHolder> {
 
     private int lastPosition = -1;
     private boolean iscolor = true;
-    private List<Model_jomleSahih_8_home_4> itemList;
+    private List<Model_TrueFalse2_9_class_3> itemList;
     private Context mContext;
     private Typeface font;
     private SavePref save;
     private int total_score = 0;
-
 
     private RadioButton rb;
     private int correct;
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
 
-        public TextView tv_tamrin_8_class_4_title;
-        public RadioButton rb_tamrin_8_class_4_1, rb_tamrin_8_class_4_2,rb_tamrin_8_class_4_3;
+        public TextView tv_tamrin_9_class_3_title;
+        public RadioButton rb_tamrin_9_class_3_1, rb_tamrin_9_class_3_2;
 
         private Button btn_okk;
         public TextView tv_error, tv_correct;
 
-
         public MyViewHolder(View view) {
             super(view);
 
-            tv_tamrin_8_class_4_title = (TextView) itemView.findViewById(R.id.tv_tamrin_8_class_4_title);
-            rb_tamrin_8_class_4_1 = (RadioButton) itemView.findViewById(R.id.rb_tamrin_8_class_4_1);
-            rb_tamrin_8_class_4_2 = (RadioButton) itemView.findViewById(R.id.rb_tamrin_8_class_4_2);
-            rb_tamrin_8_class_4_3 = (RadioButton) itemView.findViewById(R.id.rb_tamrin_8_class_4_3);
-
+            tv_tamrin_9_class_3_title = (TextView) itemView.findViewById(R.id.tv_tamrin_9_class_3_title);
+            rb_tamrin_9_class_3_1 = (RadioButton) itemView.findViewById(R.id.rb_tamrin_9_class_3_1);
+            rb_tamrin_9_class_3_2 = (RadioButton) itemView.findViewById(R.id.rb_tamrin_9_class_3_2);
 
             tv_error = (TextView) itemView.findViewById(R.id.tv_quiz_row_error);
             tv_correct = (TextView) itemView.findViewById(R.id.tv_quiz_row_correct);
             btn_okk = (Button) itemView.findViewById(R.id.btn_okk);
+
         }
     }
 
 
-    public RecyclerAdaper_Tamrin_8_home_4(Context context, List<Model_jomleSahih_8_home_4> itemList) {
+    public RecyclerAdaper_Tamrin_9_class_3(Context context, List<Model_TrueFalse2_9_class_3> itemList) {
         this.itemList = itemList;
         this.mContext = context;
         save = new SavePref(context);
@@ -72,58 +69,56 @@ public class RecyclerAdaper_Tamrin_8_home_4 extends RecyclerView.Adapter<Recycle
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.row_tamrin_8_home_4, parent, false);
+                .inflate(R.layout.row_tamrin_9_class_3, parent, false);
 
         return new MyViewHolder(itemView);
     }
 
     @Override
     public void onBindViewHolder(final MyViewHolder holder, final int position) {
-        final Model_jomleSahih_8_home_4 Item = itemList.get(position);
+        final Model_TrueFalse2_9_class_3 Item = itemList.get(position);
 
-        holder.tv_tamrin_8_class_4_title.setText(Item.getTitle());
-        holder.rb_tamrin_8_class_4_1.setText(Item.getRb_char1());
-        holder.rb_tamrin_8_class_4_2.setText(Item.getRb_char2());
-        holder.rb_tamrin_8_class_4_3.setText(Item.getRb_char3());
-
-
-        holder.rb_tamrin_8_class_4_1.setTag("1");
-        holder.rb_tamrin_8_class_4_2.setTag("2");
-        holder.rb_tamrin_8_class_4_3.setTag("3");
+        holder.tv_tamrin_9_class_3_title.setText(Item.getTitle());
+        holder.rb_tamrin_9_class_3_1.setText(Item.getRb_char1());
+        holder.rb_tamrin_9_class_3_2.setText(Item.getRb_char2());
 
 
-        holder.rb_tamrin_8_class_4_1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        holder.rb_tamrin_9_class_3_1.setTag("1");
+        holder.rb_tamrin_9_class_3_2.setTag("2");
+
+
+       /* if (Item.getId_correct() == 0){
+            holder.rb_tamrin_9_class_1_1.setTag("0");
+            holder.rb_tamrin_9_class_1_2.setTag("1");
+        }else if (Item.getId_correct() == 1){
+            holder.rb_tamrin_9_class_1_2.setTag("1");
+            holder.rb_tamrin_9_class_1_1.setTag("0");
+        }*/
+
+
+        holder.rb_tamrin_9_class_3_1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
 
                 if (b) {
-                    calc(holder.rb_tamrin_8_class_4_1, Item.getId_correct());
+                    calc(holder.rb_tamrin_9_class_3_1, Item.getId_correct());
                 }
 
             }
         });
 
-        holder.rb_tamrin_8_class_4_2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        holder.rb_tamrin_9_class_3_2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
 
                 if (b) {
-                    calc(holder.rb_tamrin_8_class_4_2, Item.getId_correct());
+                    calc(holder.rb_tamrin_9_class_3_2, Item.getId_correct());
                 }
             }
         });
 
 
 
-        holder.rb_tamrin_8_class_4_3.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-
-                if (b) {
-                    calc(holder.rb_tamrin_8_class_4_3, Item.getId_correct());
-                }
-            }
-        });
 
 
 
@@ -146,18 +141,15 @@ public class RecyclerAdaper_Tamrin_8_home_4 extends RecyclerView.Adapter<Recycle
 
 
 
-
                     String aa = "";
-                    switch (Tarmrin_8_home_4.ansever[position]) {
+                    switch (Tarmrin_8_home_5.ansever[position]) {
                         case 1:
-                            aa = holder.rb_tamrin_8_class_4_1.getText().toString();
+                            aa = holder.rb_tamrin_9_class_3_1.getText().toString();
                             break;
                         case 2:
-                            aa = holder.rb_tamrin_8_class_4_2.getText().toString();
+                            aa = holder.rb_tamrin_9_class_3_2.getText().toString();
                             break;
-                        case 3:
-                            aa = holder.rb_tamrin_8_class_4_3.getText().toString();
-                            break;
+
 
                     }
 
@@ -180,9 +172,9 @@ public class RecyclerAdaper_Tamrin_8_home_4 extends RecyclerView.Adapter<Recycle
 
     private void calc(RadioButton rb , int correct) {
 
+
         this.rb = rb;
         this.correct = correct;
-
 
         //save.save(AppController.SAVE_RANK, total_score);
 

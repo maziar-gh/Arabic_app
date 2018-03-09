@@ -6,12 +6,14 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
 import com.arabic.app.Network.AppController;
 import com.arabic.app.Network.SavePref;
+import com.arabic.app.Paye_Haft.Hashtom.Tamrin_Home_Hashtom.Tarjome_sahih_4.Tarmrin_8_home_4;
 import com.arabic.app.R;
 import com.arabic.app.model.model_8_home.Model_jayeKhali_8_home_5;
 import com.arabic.app.model.model_8_home.Model_jomleSahih_8_home_4;
@@ -32,11 +34,16 @@ public class RecyclerAdaper_Tamrin_8_home_5 extends RecyclerView.Adapter<Recycle
     private SavePref save;
     private int total_score = 0;
 
+    private RadioButton rb;
+    private int correct;
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
 
         public TextView tv_tamrin_8_class_5_title;
         public RadioButton rb_tamrin_8_class_5_1, rb_tamrin_8_class_5_2,rb_tamrin_8_class_5_3,rb_tamrin_8_class_5_4;
+
+        private Button btn_okk;
+        public TextView tv_error, tv_correct;
 
         public MyViewHolder(View view) {
             super(view);
@@ -46,6 +53,11 @@ public class RecyclerAdaper_Tamrin_8_home_5 extends RecyclerView.Adapter<Recycle
             rb_tamrin_8_class_5_2 = (RadioButton) itemView.findViewById(R.id.rb_tamrin_8_class_5_2);
             rb_tamrin_8_class_5_3 = (RadioButton) itemView.findViewById(R.id.rb_tamrin_8_class_5_3);
             rb_tamrin_8_class_5_4 = (RadioButton) itemView.findViewById(R.id.rb_tamrin_8_class_5_4);
+
+
+            tv_error = (TextView) itemView.findViewById(R.id.tv_quiz_row_error);
+            tv_correct = (TextView) itemView.findViewById(R.id.tv_quiz_row_correct);
+            btn_okk = (Button) itemView.findViewById(R.id.btn_okk);
 
         }
     }
@@ -129,6 +141,50 @@ public class RecyclerAdaper_Tamrin_8_home_5 extends RecyclerView.Adapter<Recycle
 
 
 
+        holder.btn_okk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+                holder.btn_okk.setVisibility(View.GONE);
+
+                if (rb.getTag().toString().equals(String.valueOf(correct))) {
+                    //correct
+                    holder.tv_correct.setVisibility(View.VISIBLE);
+                    holder.tv_correct.setText(rb.getText());
+
+                } else {
+                    //error
+                    holder.tv_correct.setVisibility(View.VISIBLE);
+                    holder.tv_error.setVisibility(View.VISIBLE);
+
+
+
+                    String aa = "";
+                    switch (Tarmrin_8_home_5.ansever[position]) {
+                        case 1:
+                            aa = holder.rb_tamrin_8_class_5_1.getText().toString();
+                            break;
+                        case 2:
+                            aa = holder.rb_tamrin_8_class_5_2.getText().toString();
+                            break;
+                        case 3:
+                            aa = holder.rb_tamrin_8_class_5_3.getText().toString();
+                            break;
+                        case 4:
+                            aa = holder.rb_tamrin_8_class_5_4.getText().toString();
+                            break;
+
+                    }
+
+                    holder.tv_correct.setText(aa);
+                    holder.tv_error.setText(rb.getText());
+
+                }
+
+
+            }
+        });
 
 
         //setAnimation(holder.card_item);
@@ -139,6 +195,10 @@ public class RecyclerAdaper_Tamrin_8_home_5 extends RecyclerView.Adapter<Recycle
 
 
     private void calc(RadioButton rb , int correct) {
+
+
+        this.rb = rb;
+        this.correct = correct;
 
         //save.save(AppController.SAVE_RANK, total_score);
 

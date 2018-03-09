@@ -59,6 +59,13 @@
         <activity android:name=".Paye_Haft.Hashtom.Tamrin_Home_Hashtom.Hamgorohi_3.Tarmrin_8_home_3"/>
         <activity android:name=".Paye_Haft.Hashtom.Tamrin_Home_Hashtom.Tarjome_sahih_4.Tarmrin_8_home_4"/>
         <activity android:name=".Paye_Haft.Hashtom.Tamrin_Home_Hashtom.Jaye_khali_5.Tarmrin_8_home_5"/>
+        <activity android:name=".Paye_Haft.Nohom.Tamrin_Class_Nohom.TrueFalse_1.Tarmrin_9_class_1"/>
+        <activity android:name=".Paye_Haft.Nohom.Tamrin_Class_Nohom.tarjome_sazi_2.Tarmrin_9_class_2"/>
+        <activity android:name=".Paye_Haft.Nohom.Tamrin_Class_Nohom.TrueFalse2_3.Tarmrin_9_class_3"/>
+        <activity android:name=".Paye_Haft.Nohom.Tamrin_Home_Nohom.tarjome_sazi_1.Tarmrin_9_home_1"/>
+        <activity android:name=".Paye_Haft.Nohom.Tamrin_Home_Nohom.Hamgorohi_2.Tarmrin_9_home_2"/>
+        <activity android:name=".Paye_Haft.Nohom.Tamrin_Home_Nohom.TrueFals_3.Tarmrin_9_home_3"/>
+        <activity android:name=".Paye_Haft.Nohom.Tamrin_Home_Nohom.TrueFalse2_4.Tarmrin_9_home_4"/>
 
         <meta-data
             android:name="io.fabric.ApiKey"

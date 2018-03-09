@@ -8,6 +8,8 @@ import android.view.WindowManager;
 
 import com.arabic.app.Network.AppController;
 import com.arabic.app.Network.SavePref;
+import com.arabic.app.Paye_Haft.Nohom.Tamrin_Class_Nohom.TrueFalse_1.Tarmrin_9_class_1;
+import com.arabic.app.Paye_Haft.Nohom.Tamrin_Home_Nohom.tarjome_sazi_1.Tarmrin_9_home_1;
 import com.arabic.app.R;
 import com.crashlytics.android.Crashlytics;
 
@@ -33,13 +35,15 @@ public class SplashScreen extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                //startActivity(new Intent(SplashScreen.this,DarsActivity.class));
+                startActivity(new Intent(SplashScreen.this,DarsActivity.class));
 
                 //startActivity(new Intent(SplashScreen.this,LoginActivity.class));
 
-                //startActivity(new Intent(SplashScreen.this,Tarmrin_8_home_1.class));
+                //startActivity(new Intent(SplashScreen.this,Tarmrin_8_home_5.class));
 
-                startActivity(new Intent(SplashScreen.this,TainSathActivity.class));
+                //startActivity(new Intent(SplashScreen.this,Tarmrin_9_class_1.class));
+
+                //startActivity(new Intent(SplashScreen.this,TainSathActivity.class));
                 finish();
             }
         },2000);

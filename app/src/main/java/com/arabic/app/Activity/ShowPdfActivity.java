@@ -12,6 +12,8 @@ import android.widget.Toast;
 import com.arabic.app.Network.AppController;
 import com.arabic.app.Paye_Haft.Hashtom.Tamrin_Class_Hashtom.tarjome_sazi_1.Tarmrin_8_class_1;
 import com.arabic.app.Paye_Haft.Hashtom.Tamrin_Home_Hashtom.tarjome_sazi_1.Tarmrin_8_home_1;
+import com.arabic.app.Paye_Haft.Nohom.Tamrin_Class_Nohom.TrueFalse_1.Tarmrin_9_class_1;
+import com.arabic.app.Paye_Haft.Nohom.Tamrin_Home_Nohom.tarjome_sazi_1.Tarmrin_9_home_1;
 import com.arabic.app.R;
 import com.crashlytics.android.Crashlytics;
 import com.joanzapata.pdfview.PDFView;
@@ -29,7 +31,7 @@ public class ShowPdfActivity extends AppCompatActivity implements OnPageChangeLi
     Integer pageNumber = 1;
     String pdfName = "";
 
-    private Button btn_showpdf_testSchool , btn_showpdf_testhome , btn_showpdf_teacher;
+    private Button btn_showpdf_testSchool, btn_showpdf_testhome, btn_showpdf_teacher;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,32 +42,7 @@ public class ShowPdfActivity extends AppCompatActivity implements OnPageChangeLi
 
         findView();
 
-        btn_showpdf_testSchool.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), Tarmrin_8_class_1.class);
-                startActivity(intent);
-            }
-        });
-
-        btn_showpdf_testhome.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //Toast.makeText(ShowPdfActivity.this, "تمرین در خانه", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(getApplicationContext(), Tarmrin_8_home_1.class);
-                startActivity(intent);
-            }
-        });
-
-        btn_showpdf_teacher.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(ShowPdfActivity.this, "بزودی ارتباط با استاد قرار میگیرد", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-
-        Bundle ex = getIntent().getExtras();
+        final Bundle ex = getIntent().getExtras();
         if (ex != null) {
             switch (ex.getString("file")) {
                 case "7":
@@ -107,14 +84,58 @@ public class ShowPdfActivity extends AppCompatActivity implements OnPageChangeLi
         } else finish();
 
 
+        btn_showpdf_testSchool.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = null;
+                switch (ex.getString("file")) {
+                    case "8":
+                        intent = new Intent(getApplicationContext(), Tarmrin_8_class_1.class);
+                        break;
+
+                    case "9":
+                        intent = new Intent(getApplicationContext(), Tarmrin_9_class_1.class);
+                        break;
+                }
+                startActivity(intent);
+            }
+        });
+
+        btn_showpdf_testhome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = null;
+                switch (ex.getString("file")) {
+                    case "8":
+                        intent = new Intent(getApplicationContext(), Tarmrin_8_home_1.class);
+                        break;
+
+                    case "9":
+                        intent = new Intent(getApplicationContext(), Tarmrin_9_home_1.class);
+                        break;
+                }
+                startActivity(intent);
+
+            }
+        });
+
+        btn_showpdf_teacher.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(ShowPdfActivity.this, "بزودی ارتباط با استاد قرار میگیرد", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
     }
 
 
-    private void findView(){
+    private void findView() {
         pdfView = (PDFView) findViewById(R.id.pdfview);
-        btn_showpdf_testSchool = (Button)findViewById(R.id.btn_showpdf_testSchool);
-        btn_showpdf_testhome = (Button)findViewById(R.id.btn_showpdf_testhome);
-        btn_showpdf_teacher = (Button)findViewById(R.id.btn_showpdf_teacher);
+        btn_showpdf_testSchool = (Button) findViewById(R.id.btn_showpdf_testSchool);
+        btn_showpdf_testhome = (Button) findViewById(R.id.btn_showpdf_testhome);
+        btn_showpdf_teacher = (Button) findViewById(R.id.btn_showpdf_teacher);
     }
 
     private void displayFromUri(File file) {
